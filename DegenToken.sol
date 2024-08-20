@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 // Custom ERC20 token contract with burnable functionality
 contract DegenToken is ERC20, ERC20Burnable, Ownable {
 	// Constructor function sets the token name and symbol
-	constructor() ERC20("Degen", "DGN") Ownable(msg.sender) {}
+	constructor() ERC20("Degen", "DGN") Ownable() {}
 	
 	// Mapping to track redeemed items
 	mapping(address => mapping(uint256 => bool)) public redeemedItems;
